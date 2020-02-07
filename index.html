@@ -1,0 +1,88 @@
+<DOCTYPE html>
+	<html>
+	<head>
+		<style>
+		button{
+			display:inline-block;
+			background-color: #4caf50;
+			padding:10px 20px;
+			text-align:center;
+			text-decoration:none;
+			font-size:16px;
+			border: 2px solid #4CAF50;
+			border-radius:2px;
+		}
+		button{
+			transition-duration:0.4s;
+		}
+		button:hover{
+			background-color: #4CAF50;
+			color: white;
+		}
+		body{
+			background-color:powderblue;
+		}
+		h1{
+			font-family:Sans-serif;
+			text-align:center;
+			color:blue;
+			display:block;
+		}
+		input{
+			
+			padding: 6px 10px;
+			margin: 8px 0;
+			box-sizing: border-box;
+			border: 2px solid grey;
+			border-radius: 4px;
+			background-color: white
+
+
+
+	;
+			color: black;
+		}
+		</style>
+		<meta charset= "UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>HearDiseasePrediction</title>
+		
+		<link rel='stylesheet' href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata" type='text/css'>
+		<link rel='stylesheet' href="https://fonts.googleapis.com/css2?family=Arimo& amp;display=swap"  type='text/css'>
+		<link rel='stylesheet' href="https://fonts.googleapis.com/css2?family=Hindi:300" type='text/css'>
+		<link rel='stylesheet' href="https://fonts.googleapis.com/css2?family=open+Sans+condensed:300" type='text/css'>
+		
+		
+		
+<head>
+	<body>
+	<div class = "login">
+
+		<h1 > <em><ul>HeartDiseasePrediction</ul></em></h1>
+		<!-- main input for receiving query from our ML -->
+		<form action = " {{url_for('predict')}}" method="post">
+		<input type = "text" name = "Age" placeholder="Age" required="required" />
+		<input type = "text" name = "Sex" placeholder="Sex: if male=1, if female=0" required="required" />
+		<input type = "text" name = "Chest pain type" placeholder="Chest pain type" required="required" />
+		<input type = "text" name = "Resting Blood Pressure" placeholder="Resting Blood Pressure" required="required" />
+		<input type = "text" name = "Serum Cholestrol" placeholder="Serum Cholestrol" required="required" />
+		<input type = "text" name = "Fasting Blood Sugar" placeholder="Fasting Blood Sugar" required="required" />
+		<input type = "text" name = "Restecg" placeholder="Testecg" required="required" />
+		<input type = "text" name = "Thalach" placeholder="Thalach" required="required" />
+		<input type = "text" name = "Exang" placeholder="Exang" required="required" />
+		<input type = "text" name = "Oldpeak" placeholder="Oldpeak" required="required" />
+		<input type = "text" name = "Slope" placeholder="Slope" required="required" />
+		<input type = "text" name = "Ca" placeholder="Ca" required="required" />
+		<input type = "text" name = "Thal" placeholder="Thal" required="required" />
+		<input type = "text" name = "Target" placeholder="Target" required="required" />
+
+	
+			<button type="submit" class="btn btn-primary btn-block btn-large" "hoverbuttons">Predict</button>
+</form> 	
+ <br>
+ <br>
+{{Prediction_test}}
+
+</div>
+</body>
+</html>
